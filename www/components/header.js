@@ -7,7 +7,7 @@ export default function Header(props) {
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
           <a className="toggleColour text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
-            webhooks.app
+            webhooks.app change12
           </a>
         </div>
         <div className="block lg:hidden pr-4">
@@ -32,11 +32,11 @@ export default function Header(props) {
             </li>
             <li className="mr-3">
               {(props.showDashboard != false) &&
-              <Link href="/dashboard" replace>
-                <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4">
-                  Dashboard
-                </a>
-              </Link>
+                <Link href="/dashboard" replace>
+                  <a className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4">
+                    Dashboard
+                  </a>
+                </Link>
               }
               {props.loggedIn &&
                 <button className="bg-white-500 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
