@@ -13,5 +13,8 @@ jobs:
       - name: Build
         run: |
           set -e
-          acorn build .
-          acorn run . --tests
+          mkdir -p $HOME/.kube
+          echo "$KUBECONFIG" > $HOME/.kube/config
+          ./acorn login -u "${{ github.actor }}" -p "${{ secrets.GITHUB_TOKEN }}" ghcr.io
+          ./acorn build .
+          ./acorn run . --tests
