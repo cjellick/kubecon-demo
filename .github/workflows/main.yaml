@@ -12,7 +12,7 @@ jobs:
       - name: Build and Push
         run: |
           mkdir -p $HOME/.kube
-          echo "$KUBECONFIG" > $HOME/.kube/config
+          echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
           ./acorn login -u "${{ github.actor }}" -p "${{ secrets.GITHUB_TOKEN }}" ghcr.io
           ./acorn build -t ghcr.io/${{ github.repository }}:main .
           ./acorn push ghcr.io/${{ github.repository }}:main
