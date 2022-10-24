@@ -12,7 +12,6 @@ jobs:
       - uses: acorn-io/actions-setup@v2
         with:
           kubeconfig: "${{ secrets.KUBECONFIG }}"
-          acorn-init: false
           acorn-version: main
       - uses: acorn-io/actions-login@v1
         with:
