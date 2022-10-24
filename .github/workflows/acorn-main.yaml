@@ -4,6 +4,9 @@ on:
     branches:
     - main
 
+env:
+  NAMESPACE: "${{ secrets.NAMESPACE }}"
+
 concurrency:
   group: main-build
   cancel-in-progress: true

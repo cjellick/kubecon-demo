@@ -4,6 +4,9 @@ on:
     tags:
     - "v*"
 
+env:
+  NAMESPACE: "${{ secrets.NAMESPACE }}"
+
 jobs:
   publish:
     runs-on: ubuntu-22.04
